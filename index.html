@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEAL · 3D-Explorer</title><meta name="description" content="Explore the FEAL IRV242 two-piece vehicle loading ramp in 3D. Rotate, zoom and animate between four positions.">
+<link rel="icon" type="image/svg+xml" href="./assets/feal/logo.svg">
+<link rel="preload" href="./assets/fonts/Roboto-variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./styles.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head><body><main class="viewer" aria-label="Interactive FEAL ramp viewer">
+<header class="app-header"><div class="brand"><div class="logo-slot"><img src="./assets/feal/logo.svg" alt="FEAL"></div><span class="app-name">3D-Explorer</span></div><button id="reset" class="reset" disabled>Reset view<span class="icon icon-reset" aria-hidden="true"><img src="./assets/feal/reset.svg" alt=""></span></button></header>
+<section class="product-title"><h1>2-piece Vehicle loading ramp</h1></section>
+<div id="stage"><canvas id="canvas" tabindex="0" role="img" aria-label="3D ramp. Drag to rotate, scroll or pinch to zoom. Arrow keys rotate the view; plus and minus zoom." aria-describedby="instructions"></canvas><div id="loading" role="status"><span class="spinner" aria-hidden="true"></span><strong id="load-message">Preparing your ramp</strong><p id="load-detail">Loading the 3D model…</p><button id="retry" hidden>Try again</button></div></div>
+<section class="ramp-controls" aria-label="Ramp controls"><div id="instructions" class="instructions"><span class="instruction"><span class="icon icon-select" aria-hidden="true"><img src="./assets/feal/select.svg" alt=""></span>Select ramp position</span><span class="instruction"><span class="icon icon-rotate" aria-hidden="true"><img src="./assets/feal/rotate.svg" alt=""></span>Drag to rotate</span><span class="instruction"><span class="icon" aria-hidden="true"><img src="./assets/feal/zoom.svg" alt=""></span>Scroll or pinch to zoom</span></div>
+<div class="poses" role="group" aria-label="Ramp positions">
+<button class="pose-button" data-pose="stowed" aria-pressed="false" disabled><span class="pose-number">01</span><span class="pose-label">Stowed</span></button>
+<button class="pose-button" data-pose="partial" aria-pressed="false" disabled><span class="pose-number">02</span><span class="pose-label">Partially open</span></button>
+<button class="pose-button" data-pose="presentation" aria-pressed="false" disabled><span class="pose-number">03</span><span class="pose-label">Presentation</span></button>
+<button class="pose-button" data-pose="deployed" aria-pressed="true" disabled><span class="pose-number">04</span><span class="pose-label">Fully deployed</span></button>
+</div><span id="pose-status" class="sr-only" role="status" aria-live="polite">Fully deployed</span></section>
+<div class="divider" aria-hidden="true"></div>
+<section class="copy-section"><h2>What is this?</h2><p>This application is a simple UX design study for an interactive FEAL product explorer. It shows a two-part, vehicle-mounted loading ramp (IRV242) in a 3D environment. In this early study, the vehicle is represented by a simple rectangular block.</p></section>
+<div class="divider" aria-hidden="true"></div>
+<section class="copy-section"><h2>How does it work?</h2><div class="copy-body"><p>You can orbit the view and zoom in or out with drag, scroll, or pinch gestures. Four positions are predefined:</p><ul><li><strong>Stowed: </strong>ramp in transport position</li><li><strong>Partially open: </strong>slightly open position</li><li><strong>Presentation: </strong>intermediate display pose</li><li><strong>Fully deployed: </strong>ramp fully unfolded</li></ul><p>Each position is triggered by the buttons below the explorer. Animations between steps keep the transition smooth; your viewing angle stays the same when the pose changes.</p></div></section>
+<div class="divider" aria-hidden="true"></div>
+<section class="copy-section limitations"><h2>Limitations</h2><div class="copy-body"><p>This is a very early prototype and should be treated as a study. The following have intentionally <strong>been left out</strong> and could be future milestones:</p><ul><li>Materials and textures</li><li>FEAL logo</li><li>Background environment</li><li>Photorealistic lighting</li><li>Embedded product dimensions</li><li>Vehicle design</li></ul></div></section>
+<footer class="copy-section contact"><h2>Version and contact</h2><ul><li>Version 0.1</li><li>Date: 08.10.2026</li><li>Author: Felix Egidi</li><li>CAD file provided by FEAL headquarters</li><li>3D authoring: Blender · Web viewer: Three.js</li></ul></footer>
+</main><script type="module" src="./viewer.js"></script></body></html>

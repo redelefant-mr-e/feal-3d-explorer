@@ -1,0 +1,14 @@
+/* FEAL mini design system — Figma 4420:6471 and 4417:6427. */
+@font-face{font-family:Roboto;src:url('./assets/fonts/Roboto-variable.ttf') format('truetype');font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap}
+:root{
+ --feal-black:#000000;--feal-white:#ffffff;--feal-blue:#0072b7;--feal-warm-sand:#f5f1e8;
+ --color-text:var(--feal-black);--color-page:var(--feal-white);--color-header:var(--feal-warm-sand);--color-rule:var(--feal-blue);
+ --font-body:Roboto,Arial,sans-serif;--font-heading:Roboto,Arial,sans-serif;
+ --weight-regular:400;--weight-semibold:600;--heading-width:75;
+ --type-h2:24px;--line-h2:36px;--type-h5:16px;--line-h5:28px;
+ --type-body:16px;--line-body:24px;--type-xxs:10px;--line-xxs:14px;--type-button:14px;--line-button:14px;
+ --space-xxs:4px;--space-xs:8px;--space-s:12px;--space-m:16px;--space-l:20px;
+ --page-padding:20px;--max-width:799px;--viewer-height:360px;--copy-gap:10px;
+ --button-bg:var(--feal-blue);--button-selected:var(--feal-black);--button-text:var(--feal-white);
+ --button-padding-x:16px;--button-padding-y:10px;--button-radius:100px;
+}
